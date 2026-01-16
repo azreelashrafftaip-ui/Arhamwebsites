@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Portfolio</title>
+
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f0f0f0;
+  color: #222;
+}
+
+
+.header, .sub-header {
+  width: 100%;
+  padding: 25px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+.header { top: 0; background-color: #ffffff; }
+.sub-header { top: 80px; background-color: #ebeced; }
+
+.logo { font-size: 30px; font-weight: bold; color: #000; }
+
+.icon-container { display: flex; align-items: center; gap: 30px; transform: translateX(250px); }
+.icon img { height: 20px; transition: opacity 0.3s ease; }
+.icon img:hover { opacity: 0.7; }
+
+.icon-container a[href$=".html"] {
+  position: relative;
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon-container a[href$=".html"]::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  left: 0;
+  bottom: -4px;
+  background-color: #1fa64a;
+  transition: width 0.3s ease;
+}
+
+.icon-container a[href$=".html"]:hover { color: #1fa64a; transform: scale(1.1); }
+.icon-container a[href$=".html"]:hover::after { width: 100%; }
+
+.icon-container a[href$=".html"]:nth-child(4) { margin-left: 150px; }
+.icon-container a[href$=".html"]:nth-child(5),
+.icon-container a[href$=".html"]:nth-child(6),
+.icon-container a[href$=".html"]:nth-child(7),
+.icon-container a[href$=".html"]:nth-child(8) { margin-left: 50px; }
+
+
+.parallax-section {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 150px;
+  flex-direction: column;
+  background:
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url('wallpaper2.jpg');
+  background-size: cover;
+  background-position: center;
+}
+
+.home-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #ffffff;
+  text-shadow: 0 0 15px rgba(31,166,74,0.7);
+  margin-bottom: 25px;
+  animation: fadeInDown 1.5s ease forwards;
+  opacity: 0;
+}
+
+.home-subtitle {
+  font-size: 22px;
+  color: #ffffff;
+  margin-bottom: 40px;
+  text-shadow: 0 0 8px rgba(0,0,0,0.5);
+  animation: fadeInUp 1.5s ease forwards;
+  opacity: 0;
+}
+
+.enter-btn {
+  padding: 14px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #1fa64a;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  animation: fadeIn 2s ease forwards;
+  opacity: 0;
+}
+
+.enter-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+}
+
+
+@keyframes fadeInDown {
+  0% { opacity: 0; transform: translateY(-30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translateY(30px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111827;
+  color: white;
+  font-size: 14px;
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="header">
+  <div class="logo">ARHAM HAKIMI</div>
+</div>
+
+<div class="sub-header">
+  <div class="icon-container">
+    <a class="icon" href="https://www.facebook.com/share/1AKUXhPaBd/?mibextid=wwXIfr" target="_blank">
+      <img src="facebook.png" alt="Facebook">
+    </a>
+
+    <a class="icon" href="https://www.instagram.com/arhmhkimi/?hl=en" target="_blank">
+      <img src="instagram.png" alt="Instagram">
+    </a>
+
+    <a class="icon" href="https://x.com/hakimiarham14" target="_blank">
+      <img src="twitter.png" alt="Twitter">
+    </a>
+
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="edu.html">Education</a>
+    <a href="hobby.html">Achievements</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</div>
+
+
+<section class="parallax-section">
+
+  <div class="home-title">Arham Hakimi Portfolio</div>
+  <div class="home-subtitle">Discover Arham's projects, achievements, and passions</div>
+  <button class="enter-btn" onclick="window.location.href='about.html'">Enter</button>
+
+</section>
+
+<script type="text/javascript">
+
+document.write("Current Date is <b>"+Date()+"</b>");
+
+</script>
+
+<footer>
+  <footer>© 2026 | Developed by Azreel da Goat   |   All right served for IMD 318 Assignment Purpose</footer>
+</footer>
+
+</body>
+</html>
